@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traductor Español-Inglés</title>
+</head>
+<body>
+    <h2>Traductor de Español a Inglés</h2>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form action="/translate" method="post">
+        <label for="text">Ingresa el texto en español:</label><br>
+        <textarea id="text" name="text" rows="4" cols="50"></textarea><br><br>
+        <button type="submit">Traducir</button>
+    </form>
+</body>
+</html>
